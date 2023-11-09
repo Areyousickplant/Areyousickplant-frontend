@@ -1,7 +1,5 @@
 function App() {
-  return (
-    <div></div>
-  );
+  return <div>Are you Sick물?</div>;
 }
 
 export default App;
