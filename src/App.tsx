@@ -3,10 +3,12 @@ import Home from "pages/Home";
 import Detail from "pages/Detail";
 import Login from "pages/Login";
 import Signup from "pages/Signup";
+import Header from "components/Header";
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/detail" element={<Detail />} />
