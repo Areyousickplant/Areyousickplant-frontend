@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "assets/loginImg.svg";
+import bg from "assets/Background.svg";
 
 export const Container = styled.div`
   background-image: url(${bg});
@@ -24,6 +24,8 @@ export const LeftContainer = styled.div`
   background-color: #09ac5d;
   width: 33vw;
   height: 70vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 `;
 
 export const Logo = styled.img`
@@ -37,6 +39,8 @@ export const RightContainer = styled.div`
   background-color: white;
   width: 33vw;
   height: 70vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 export const Title = styled.div`
