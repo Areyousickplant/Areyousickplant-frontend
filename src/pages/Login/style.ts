@@ -30,7 +30,6 @@ export const LeftContainer = styled.div`
 
 export const Logo = styled.img`
   width: 50%;
-  height: 50%;
 `;
 
 export const RightContainer = styled.div`
