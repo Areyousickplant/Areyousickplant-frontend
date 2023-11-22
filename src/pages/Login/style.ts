@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-image: url(${bg});
   display: flex;
   align-items: center;
-  height: 92.5vh;
+  height: 94vh;
 `;
 
 export const LoginContainer = styled.div`
@@ -13,7 +13,6 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   border-radius: 30px;
 `;
 

@@ -6,7 +6,7 @@ export const Layout = styled.div`
   align-items: center;
   gap: 50px;
   width: 100%;
-  height: 7.5vh;
+  height: 6vh;
   overflow: hidden;
   border-bottom: 1px solid #72837b;
 `;
