@@ -14,7 +14,6 @@ function Login() {
             <S.Explain>회원 서비스 이용을 위해 로그인해주세요.</S.Explain>
           </S.TextBox>
           <S.InputBox>
-            <S.Input type="text" placeholder="이름" name="u_name" />
             <S.Input type="text" placeholder="아이디" name="u_id" />
             <S.Input type="password" placeholder="비밀번호" name="u_password" />
           </S.InputBox>

@@ -65,7 +65,7 @@ export const InputBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 40%;
+  height: 25%;
   margin-bottom: 10%;
 `;
 
