@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-image: url(${bg});
   display: flex;
   align-items: center;
-  height: 92.5vh;
+  height: 94vh;
 `;
 
 export const SignupContainer = styled.div`
@@ -13,7 +13,6 @@ export const SignupContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   border-radius: 30px;
 `;
 
@@ -22,8 +21,8 @@ export const LeftContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #09ac5d;
-  width: 33vw;
-  height: 70vh;
+  width: 37.5%;
+  aspect-ratio: 1;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 `;
@@ -34,61 +33,62 @@ export const Logo = styled.img`
 
 export const RightContainer = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: white;
-  width: 33vw;
-  height: 70vh;
+  aspect-ratio: 1;
+  padding: 3.5% 5.5%;
+  width: 37.5%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
 
+export const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12.5%;
+`;
+
 export const Title = styled.div`
-  font-size: 2.5em;
+  font-size: 3rem;
   font-weight: 500;
-  padding-top: 2em;
-  padding-left: 2em;
 `;
 
 export const Explain = styled.div`
   color: #a4a1a1;
-  padding-left: 4.2em;
-  padding-top: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.4rem;
 `;
 
-export const SignupInput = styled.div`
-  padding-left: 4.2em;
-  margin-top: 2.2em;
-`;
-
-export const Signup = styled.input`
-  padding-left: 0.5em;
-  border: 1px solid #09ac5d;
-  width: 22.5vw;
-  height: 5.5vh;
-  border-radius: 6px;
-  margin: 0.7em;
-  &:placeholder {
-    color: #9fa2a0;
-  }
-`;
-
-export const BtnBox = styled.div`
+export const InputBox = styled.div`
   display: flex;
-  height: 15.5vh;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  margin-bottom: 10%;
 `;
+
+export const Input = styled.input`
+  border: 1px solid #09ac5d;
+  width: 100%;
+  padding: 3.5% 5%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+`;
+
+export const SignupBtnBox = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const SignupBtn = styled.button`
   background-color: #09ac5d;
   color: white;
-  width: 9vw;
-  height: 5.7vh;
+  padding: 3.5% 5%;
+  width: 30%;
   border: none;
-  border-radius: 12px;
+  border-radius: 15px;
   cursor: pointer;
-  font-size: 0.9em;
-  &:hover {
-    background-color: #0d8a4e;
-  }
+  font-size: 1.2rem;
 `;
