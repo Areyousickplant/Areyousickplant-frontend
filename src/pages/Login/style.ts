@@ -21,7 +21,7 @@ export const LeftContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #09ac5d;
-  width: 40%;
+  width: 37.5%;
   aspect-ratio: 1;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -31,14 +31,14 @@ export const Logo = styled.img`
   width: 50%;
 `;
 
-export const RightContainer = styled.div`
+export const RightContainer = styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: white;
   aspect-ratio: 1;
-  padding: 5.5%;
-  width: 40%;
+  padding: 3.5% 5.5%;
+  width: 37.5%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 `;
@@ -65,14 +65,14 @@ export const InputBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 45%;
+  height: 42.5%;
   margin-bottom: 10%;
 `;
 
 export const Input = styled.input`
   border: 1px solid #09ac5d;
   width: 100%;
-  padding: 3.5% 5%;
+  padding: 4% 5%;
   border-radius: 10px;
   font-size: 1.25rem;
 `;
