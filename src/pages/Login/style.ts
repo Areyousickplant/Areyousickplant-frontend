@@ -65,16 +65,16 @@ export const InputBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 42.5%;
+  height: 40%;
   margin-bottom: 10%;
 `;
 
 export const Input = styled.input`
   border: 1px solid #09ac5d;
   width: 100%;
-  padding: 4% 5%;
+  padding: 3.5% 5%;
   border-radius: 10px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 `;
 
 export const LoginBtnBox = styled.div`
