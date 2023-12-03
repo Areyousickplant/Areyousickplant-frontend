@@ -35,6 +35,7 @@ export const data2 = {
     },
   ],
 };
+
 export const data3 = {
   datasets: [
     {
@@ -44,30 +45,20 @@ export const data3 = {
   ],
 };
 
-export function Chart1() {
-  return (
-    <div className="contentWrap">
-      <div className="contentInner">
-        <Doughnut options={options} data={data1} />
-      </div>
-    </div>
-  );
-}
+type ChartComponentProps = {
+  data: {
+    datasets: Array<{
+      data: number[];
+      backgroundColor: string[];
+    }>;
+  };
+};
 
-export function Chart2() {
+export function ChartComponent({ data }: ChartComponentProps) {
   return (
     <div className="contentWrap">
       <div className="contentInner">
-        <Doughnut options={options} data={data2} />
-      </div>
-    </div>
-  );
-}
-export function Chart3() {
-  return (
-    <div className="contentWrap">
-      <div className="contentInner">
-        <Doughnut options={options} data={data3} />
+        <Doughnut options={options} data={data} />
       </div>
     </div>
   );
@@ -85,7 +76,7 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Temperature>
-          <Chart1 />
+          <ChartComponent data={data1} />
         </S.Temperature>
       </S.ChartBox>
       <S.ChartBox color="#37BCAC">
@@ -97,7 +88,7 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Light>
-          <Chart2 />
+          <ChartComponent data={data2} />
         </S.Light>
       </S.ChartBox>
       <S.ChartBox color="#377CBC">
@@ -109,7 +100,7 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Humid>
-          <Chart3 />
+          <ChartComponent data={data3} />
         </S.Humid>
       </S.ChartBox>
     </S.ChartBoxs>
