@@ -1,9 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-
-// 기본 Doughnut 차트
-// https://react-chartjs-2.js.org/components/Doughnut
+import * as S from "./style";
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend);
 
@@ -17,6 +15,7 @@ export const options = {
       display: false,
     },
   },
+  cutout: "80%",
 };
 
 export const data1 = {
@@ -36,7 +35,6 @@ export const data2 = {
     },
   ],
 };
-
 export const data3 = {
   datasets: [
     {
@@ -74,3 +72,48 @@ export function Chart3() {
     </div>
   );
 }
+
+function Chart() {
+  return (
+    <S.ChartBoxs>
+      <S.ChartBox color="#09AC5D">
+        <S.ChartLeft>
+          <S.ChartText>온도 그래프</S.ChartText>
+          <S.Score>
+            <S.Line color="#09AC5D" />
+            <S.ScoreText>0점</S.ScoreText>
+          </S.Score>
+        </S.ChartLeft>
+        <S.Temperature>
+          <Chart1 />
+        </S.Temperature>
+      </S.ChartBox>
+      <S.ChartBox color="#37BCAC">
+        <S.ChartLeft>
+          <S.ChartText>조도 그래프</S.ChartText>
+          <S.Score>
+            <S.Line color="#37BCAC" />
+            <S.ScoreText>0점</S.ScoreText>
+          </S.Score>
+        </S.ChartLeft>
+        <S.Light>
+          <Chart2 />
+        </S.Light>
+      </S.ChartBox>
+      <S.ChartBox color="#377CBC">
+        <S.ChartLeft>
+          <S.ChartText>습도 그래프</S.ChartText>
+          <S.Score>
+            <S.Line color="#377CBC" />
+            <S.ScoreText>0점</S.ScoreText>
+          </S.Score>
+        </S.ChartLeft>
+        <S.Humid>
+          <Chart3 />
+        </S.Humid>
+      </S.ChartBox>
+    </S.ChartBoxs>
+  );
+}
+
+export default Chart;

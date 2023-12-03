@@ -163,31 +163,35 @@ export const ChartBoxs = styled.div`
 export const ChartBox = styled.div`
   display: flex;
   width: 30%;
-  padding: 4%;
+  padding: 2%;
   border: 1px ${(props) => props.color} solid;
   border-radius: 20px;
-  gap: 20%;
+  gap: 39%;
 `;
 
 export const ChartLeft = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 20%;
 `;
 
 export const ChartRight = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
 `;
 
 export const Temperature = styled.div`
-  width: 50%;
+  width: 40%;
 `;
 
 export const Light = styled.div`
-  width: 50%;
+  width: 40%;
 `;
 
 export const Humid = styled.div`
-  width: 50%;
+  width: 40%;
 `;
 
 export const ChartText = styled.div`
@@ -196,8 +200,20 @@ export const ChartText = styled.div`
   font-weight: 700;
 `;
 
+export const Score = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+`;
+
 export const Line = styled.div`
-  height: 50%;
+  height: 40%;
   border-left: 4px solid ${(props) => props.color};
-  margin-top: 30%;
+`;
+
+export const ScoreText = styled.div`
+  font-weight: 700;
+  font-size: 2rem;
+  padding-left: 50%;
+  white-space: nowrap;
 `;

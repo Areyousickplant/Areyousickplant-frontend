@@ -2,7 +2,7 @@ import mv from "assets/moveIcon.svg";
 import hoverCheck from "assets/hoverCheckIcon.svg";
 import check from "assets/checkIcon.svg";
 import Calendar from "pages/Calendar";
-import { Chart1, Chart2, Chart3 } from "pages/Chart";
+import Chart from "pages/Chart";
 import ReactWeather, { useOpenWeather } from "react-open-weather";
 import React, { useState } from "react";
 import * as S from "./style";
@@ -85,35 +85,7 @@ function Home() {
           내 식물 통계 보러가기
           <S.ChartMv src={mv} alt="moveIcon" />
         </S.ChartBtn>
-        <S.ChartBoxs>
-          <S.ChartBox color="#09AC5D">
-            <S.ChartLeft>
-              <S.ChartText>온도 그래프</S.ChartText>
-              <S.Line color="#09AC5D" />
-            </S.ChartLeft>
-            <S.Temperature>
-              <Chart1 />
-            </S.Temperature>
-          </S.ChartBox>
-          <S.ChartBox color="#37BCAC">
-            <S.ChartLeft>
-              <S.ChartText>조도 그래프</S.ChartText>
-              <S.Line color="#37BCAC" />
-            </S.ChartLeft>
-            <S.Light>
-              <Chart2 />
-            </S.Light>
-          </S.ChartBox>
-          <S.ChartBox color="#377CBC">
-            <S.ChartLeft>
-              <S.ChartText>습도 그래프</S.ChartText>
-              <S.Line color="#377CBC" />
-            </S.ChartLeft>
-            <S.Humid>
-              <Chart3 />
-            </S.Humid>
-          </S.ChartBox>
-        </S.ChartBoxs>
+        <Chart />
       </S.ChartContainer>
     </S.Container>
   );
