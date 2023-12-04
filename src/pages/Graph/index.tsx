@@ -1,19 +1,19 @@
-import { useState } from "react";
-import Calendar from "react-calendar";
-import "./Calendar.css";
+import Chart from "pages/Chart";
+import GraphData from "./GraphData";
+import * as S from "./style";
 
-type ValuePiece = Date | null;
-
-type Value = ValuePiece | [ValuePiece, ValuePiece];
-
-function MyCalendar() {
-  const [value, onChange] = useState<Value>(new Date());
-
+function Graph() {
   return (
-    <div>
-      <Calendar onChange={onChange} value={value} />
-    </div>
+    <S.Container>
+      <S.MainContainer />
+      <S.ChartContainer>
+        <Chart />
+      </S.ChartContainer>
+      <S.GraphContainer>
+        <GraphData />
+      </S.GraphContainer>
+    </S.Container>
   );
 }
 
-export default MyCalendar;
+export default Graph;
