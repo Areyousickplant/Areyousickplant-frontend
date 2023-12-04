@@ -17,6 +17,23 @@ export const ChartContainer = styled.div`
   padding: 10% 15%;
 `;
 
+export const GraphBox = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  felx-direction: row;
+  padding: 10%;
+  gap: 5%;
+`;
+
+export const Left = styled.img`
+  width: 2.5%;
+`;
 export const GraphContainer = styled.div`
-  width: 50%;
+  border: 1px solid #09ac5d;
+  border-radius: 20px;
+  padding: 5%;
+`;
+export const Right = styled.img`
+  width: 2.5%;
 `;
