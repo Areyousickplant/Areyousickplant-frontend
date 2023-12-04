@@ -1,5 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+
 import { Doughnut } from "react-chartjs-2";
 import * as S from "./style";
 
@@ -65,6 +67,8 @@ export function ChartComponent({ data }: ChartComponentProps) {
 }
 
 function Chart() {
+  const percentage = 66;
+
   return (
     <S.ChartBoxs>
       <S.ChartBox color="#09AC5D">
@@ -76,7 +80,35 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Temperature>
-          <ChartComponent data={data1} />
+          <CircularProgressbar
+            value={percentage}
+            text={`${percentage}%`}
+            styles={{
+              root: {},
+              path: {
+                stroke: "#09AC5D",
+                strokeLinecap: "round",
+                transition: "stroke-dashoffset 0.5s ease 0s",
+                transform: "rotate(0turn)",
+                transformOrigin: "center center",
+              },
+              trail: {
+                stroke: "#E6E6E6",
+                strokeLinecap: "butt",
+                transform: "rotate(0.25turn)",
+                transformOrigin: "center center",
+              },
+              text: {
+                fill: "#09AC5D",
+                fontSize: "1rem",
+                dominantBaseline: "middle",
+                textAnchor: "middle",
+              },
+              background: {
+                fill: "#09AC5D",
+              },
+            }}
+          />
         </S.Temperature>
       </S.ChartBox>
       <S.ChartBox color="#37BCAC">
@@ -88,7 +120,35 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Light>
-          <ChartComponent data={data2} />
+          <CircularProgressbar
+            value={percentage}
+            text={`${percentage}%`}
+            styles={{
+              root: {},
+              path: {
+                stroke: "#37BCAC",
+                strokeLinecap: "round",
+                transition: "stroke-dashoffset 0.5s ease 0s",
+                transform: "rotate(0turn)",
+                transformOrigin: "center center",
+              },
+              trail: {
+                stroke: "#E6E6E6",
+                strokeLinecap: "butt",
+                transform: "rotate(0.25turn)",
+                transformOrigin: "center center",
+              },
+              text: {
+                fill: "#37BCAC",
+                fontSize: "1rem",
+                dominantBaseline: "middle",
+                textAnchor: "middle",
+              },
+              background: {
+                fill: "#09AC5D",
+              },
+            }}
+          />
         </S.Light>
       </S.ChartBox>
       <S.ChartBox color="#377CBC">
@@ -100,7 +160,35 @@ function Chart() {
           </S.Score>
         </S.ChartLeft>
         <S.Humid>
-          <ChartComponent data={data3} />
+          <CircularProgressbar
+            value={percentage}
+            text={`${percentage}%`}
+            styles={{
+              root: {},
+              path: {
+                stroke: "#377CBC",
+                strokeLinecap: "round",
+                transition: "stroke-dashoffset 0.5s ease 0s",
+                transform: "rotate(0turn)",
+                transformOrigin: "center center",
+              },
+              trail: {
+                stroke: "#E6E6E6",
+                strokeLinecap: "butt",
+                transform: "rotate(0.25turn)",
+                transformOrigin: "center center",
+              },
+              text: {
+                fill: "#377CBC",
+                fontSize: "1rem",
+                dominantBaseline: "middle",
+                textAnchor: "middle",
+              },
+              background: {
+                fill: "#09AC5D",
+              },
+            }}
+          />
         </S.Humid>
       </S.ChartBox>
     </S.ChartBoxs>
