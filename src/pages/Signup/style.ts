@@ -31,7 +31,7 @@ export const Logo = styled.img`
   width: 50%;
 `;
 
-export const RightContainer = styled.div`
+export const RightContainer = styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
