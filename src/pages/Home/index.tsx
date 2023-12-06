@@ -1,9 +1,12 @@
 import mv from "assets/moveIcon.svg";
 import hoverCheck from "assets/hoverCheckIcon.svg";
 import check from "assets/checkIcon.svg";
-import Calendar from "pages/Calendar";
+import Calendar from "components/Calendar";
 import Chart from "pages/Chart";
-import React, { useState } from "react";
+import Weather from "components/Weather";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import * as S from "./style";
 
 function Home() {
@@ -24,43 +27,42 @@ function Home() {
             <S.Registertration
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
+              onClick={() => toast.error("현재 식물을 등록할 수 없습니다!")}
             >
               <S.TextBox>
-                <S.RegisterText
-                  style={{ color: isHovered ? "white" : "black" }}
-                >
-                  내 식물{" "}
-                  <S.Green1 style={{ color: isHovered ? "white" : "#09ac5d" }}>
-                    등록
-                  </S.Green1>
-                  하기
+                <S.RegisterText isHovered={isHovered}>
+                  내 식물 <S.Green isHovered={isHovered}>등록</S.Green>하기
                 </S.RegisterText>
-                <S.Explain style={{ color: isHovered ? "white" : "#72837B" }}>
-                  내 식물의 종류, 키운 시기,
+                <S.Explain isHovered={isHovered}>
+                  내 식물의 종류, 키운 시기
                   <br /> 등을 등록해주세요!
                 </S.Explain>
               </S.TextBox>
-              <S.Check src={isHovered ? hoverCheck : check} alt="checkIcon" />
+              <S.CheckBox>
+                <S.Check src={isHovered ? hoverCheck : check} />
+              </S.CheckBox>
             </S.Registertration>
-            <S.Weather />
+            <Weather />
           </S.PlantLeft>
           <S.Growing>
             <S.GrowingText>
-              식물<S.Green2>성장</S.Green2>일지
+              식물
+              <br />
+              <S.Green>성장</S.Green>
+              <br />
+              일지
             </S.GrowingText>
-            <S.CalendarBox>
-              <Calendar />
-            </S.CalendarBox>
+            <Calendar />
           </S.Growing>
         </S.PlantBox>
-      </S.PlantContainer>
-      <S.ChartContainer>
-        <S.ChartBtn>
-          내 식물 통계 보러가기
-          <S.ChartMv src={mv} alt="moveIcon" />
-        </S.ChartBtn>
+        <Link to="/graph">
+          <S.ChartBtn>
+            내 식물 통계 보러가기
+            <S.ChartMv src={mv} alt="moveIcon" />
+          </S.ChartBtn>
+        </Link>
         <Chart />
-      </S.ChartContainer>
+      </S.PlantContainer>
     </S.Container>
   );
 }
